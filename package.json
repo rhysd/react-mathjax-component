@@ -1,0 +1,41 @@
+{
+  "name": "react-mathjax-component",
+  "version": "0.0.0",
+  "description": "React component to render math expressions with Mathjax through LiteDOM. Neither dangerouslySetInnerHTML nor real DOM insertion is necessary.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -p . --watch",
+    "build": "tsc -p . -d",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhysd/react-mathjax-component.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "mathjax",
+    "math"
+  ],
+  "author": "rhysd <lin90162@yahoo.co.jp> (https://rhysd.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhysd/react-mathjax-component/issues"
+  },
+  "homepage": "https://github.com/rhysd/react-mathjax-component#readme",
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "camel-case": "^4.1.2",
+    "mathjax-full": "^3.2.2"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  }
+}
