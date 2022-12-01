@@ -4,8 +4,12 @@
   "description": "React component to render math expressions with Mathjax through LiteDOM. Neither dangerouslySetInnerHTML nor real DOM insertion is necessary.",
   "main": "index.js",
   "scripts": {
-    "watch": "tsc -p . --watch",
+    "start": "concurrently -c auto npm:demo npm:watch:ts npm:watch:bundle",
+    "demo": "http-server -p 1234 ./demo",
+    "watch:ts": "tsc -p . --preserveWatchOutput --pretty --watch",
+    "watch:bundle": "esbuild demo/index.tsx --bundle --outfile=demo/bundle.js --platform=browser --color=true --watch",
     "build": "tsc -p . -d",
+    "bundle": "esbuild demo/index.tsx --bundle --outfile=demo/bundle.js --platform=browser --color=true --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +31,9 @@
   "devDependencies": {
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
+    "concurrently": "^7.6.0",
+    "esbuild": "^0.15.16",
+    "http-server": "^14.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.3"

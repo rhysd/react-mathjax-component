@@ -23,6 +23,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "*.tsx"
+    "*.ts",
+    "*.tsx",
+    "demo/*.tsx"
   ]
 }

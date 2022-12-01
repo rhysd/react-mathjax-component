@@ -1,0 +1,13 @@
+#react-root {
+  display: flex;
+  flex-direction: column;
+}
+
+#textarea {
+  margin: 16px;
+  min-height: 100px;
+}
+
+#expression {
+  margin: 16px auto;
+}
