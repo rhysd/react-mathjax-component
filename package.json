@@ -10,6 +10,7 @@
     "watch:bundle": "esbuild demo/index.tsx --bundle --outfile=demo/bundle.js --platform=browser --color=true --watch",
     "build": "tsc -p . -d",
     "bundle": "esbuild demo/index.tsx --bundle --outfile=demo/bundle.js --platform=browser --color=true --minify",
+    "postinstall": "cp node_modules/bulma/css/bulma.min.css ./demo/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
+    "bulma": "^0.9.4",
     "concurrently": "^7.6.0",
     "esbuild": "^0.15.16",
     "http-server": "^14.1.1",

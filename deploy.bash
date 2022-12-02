@@ -20,6 +20,7 @@ files=(
     index.html
     bundle.js
     style.css
+    bulma.min.css
 )
 
 mkdir ./.tmp
