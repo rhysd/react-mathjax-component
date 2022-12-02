@@ -1,13 +1,68 @@
+html {
+  background-color: white;
+  width: 100wv;
+}
+
+body {
+  width: 100%;
+}
+
+#ribbon {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#intro {
+  margin-bottom: 16px;
+}
+
 #react-root {
   display: flex;
-  flex-direction: column;
+  width: 100%;
 }
 
-#textarea {
-  margin: 16px;
-  min-height: 100px;
+#expr-input {
+  width: 50%;
+  padding: 0 8px;
 }
 
-#expression {
-  margin: 16px auto;
+#expr-textarea {
+  min-height: 300px;
+}
+
+#expr-output {
+  width: 50%;
+  padding: 0 8px;
+}
+
+#expr {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  #ribbon {
+    display: none;
+  }
+
+  #react-root {
+    flex-direction: column;
+  }
+
+  #expr-input {
+    width: 100%;
+  }
+
+  #expr-textarea {
+    min-height: 100px;
+  }
+
+  #expr-output {
+    width: 100%;
+  }
 }
