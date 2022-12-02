@@ -33,7 +33,7 @@ export interface MathjaxProps {
     document?: Document;
 }
 
-const Mathjax: React.FC<MathjaxProps> = ({expr, document}) => {
+const Mathjax: React.FC<MathjaxProps> = ({ expr, document }) => {
     const converter = document ?? getDefaultDocument();
     const node = converter.convert(expr) as LiteElement;
     const children = render(node.children);

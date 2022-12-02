@@ -10,6 +10,8 @@
     "watch:bundle": "esbuild demo/index.tsx --bundle --outfile=demo/bundle.js --platform=browser --color=true --watch",
     "build": "tsc -p . -d",
     "bundle": "esbuild demo/index.tsx --bundle --outfile=demo/bundle.js --platform=browser --color=true --minify",
+    "lint": "prettier --check '*.ts' '*.tsx' 'demo/*.tsx'",
+    "fmt": "prettier --write '*.ts' '*.tsx' 'demo/*.tsx'",
     "postinstall": "cp node_modules/bulma/css/bulma.min.css ./demo/",
     "test": "mocha test.js"
   },
@@ -39,6 +41,7 @@
     "esbuild": "^0.15.16",
     "http-server": "^14.1.1",
     "mocha": "^10.1.0",
+    "prettier": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.3"
