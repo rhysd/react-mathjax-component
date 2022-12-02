@@ -11,6 +11,8 @@ interface Style {
     [name: string]: string;
 }
 
+// This function will be no longer necessary when this PR is merged.
+// https://github.com/mathjax/MathJax-src/pull/877
 function parseStyle(text: string): Style {
     const style: Style = {};
     for (const s of text.split(';')) {
@@ -41,7 +43,9 @@ function props(elem: LiteElement, key: number | string): LiteProps {
     if (elem.styles !== null) {
         style += elem.styles.cssText;
     }
-    props.style = parseStyle(style);
+    if (style.length > 0) {
+        props.style = parseStyle(style);
+    }
     return props;
 }
 
