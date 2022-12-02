@@ -45,6 +45,6 @@
     "mathjax-full": "^3.2.2"
   },
   "peerDependencies": {
-    "react": "^18.0.0"
+    "react": "^16.0.0"
   }
 }

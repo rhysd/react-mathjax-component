@@ -1,4 +1,4 @@
-import { createElement as h } from 'react';
+import { createElement } from 'react';
 import type { LiteElement, LiteNode } from 'mathjax-full/js/adaptors/lite/Element';
 import type { LiteText } from 'mathjax-full/js/adaptors/lite/Text';
 import { camelCase } from 'camel-case';
@@ -50,7 +50,7 @@ export function render(nodes: LiteNode[]): React.ReactNode[] {
         if (isLiteText(node)) {
             return node.value;
         } else {
-            return h(node.kind, props(node, idx), ...render(node.children));
+            return createElement(node.kind, props(node, idx), ...render(node.children));
         }
     });
 }
