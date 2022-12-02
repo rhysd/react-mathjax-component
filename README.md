@@ -57,7 +57,7 @@ import { TeX } from 'mathjax-full/js/input/tex';
 import { SVG } from 'mathjax-full/js/output/svg';
 
 const yourDocument = mathjax.document('', {
-    InputJax: new TeX({ packages: [...] }), // customize packages
+    InputJax: new TeX({ packages: ... }), // customize packages
     OutputJax: new SVG({ fontCache: 'global' }), // customize cache strategy
 });
 
