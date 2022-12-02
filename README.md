@@ -3,7 +3,8 @@ React component for Mathjax
 [![npm][npm-badge]][npm]
 [![CI][ci-badge]][ci]
 
-[react-mathjax-component][npm] is a package to render math expressions as [React][react] with [Mathjax][mathjax].
+[react-mathjax-component][npm] is a package to render math expressions as [React][react] element tree with
+[Mathjax][mathjax].
 
 Basic usage is very simple. This renders $e = mc^2$. Visit [the demo page][demo] to see how it works on your browser.
 
@@ -16,10 +17,10 @@ const root = document.getElementById('root');
 createRoot(root).render(<Mathjax expr="e = mc^2"/>);
 ```
 
-This package converts [Mathjax's LiteDOM][litedom] into React element tree. It is
+This package is built with the idea of converting [Mathjax's LiteDOM][litedom] into React element tree. It is
 
 - **Clean**: No `dangerouslySetInnerHTML`. No hacky DOM manipulation.
-- **Fast**: React runtime can do differential update correctly. (Math expression consists of bunch of SVG elements)
+- **Fast**: React runtime can do differential update correctly. (Single math expression consists of bunch of SVG elements)
 - **Small**: No complicated hack for DOM cache and no React context value. It's a single small functional component.
 
 ## Installation
@@ -38,11 +39,11 @@ And the React cannot do differential update for the inner HTML string.
 Instead, you may use existing [several][1] [React][2] [libraries][3] [for Mathjax][4]. However all of them are relying on
 hacky real DOM manipulations.
 
-In contrast, the idea converting [LiteDOM][litedom] into React element tree does not need such hacks. And converted React
-element tree can be used for differential DOM update by React runtime. A simple math expression consist of bunch of SVG
+In contrast, the idea of converting [LiteDOM][litedom] into React element tree does not need such hacks. And React runtime
+can do differential DOM update for the coverted React element tree.  A simple math expression consists of bunch of SVG
 elements so this is important for performance.
 
-LiteDOM is a small internal representation used by Mathjax to represent SVG element tree. It was created to render math
+LiteDOM is a small internal representation used by Mathjax to represent an SVG element tree. It was created to render math
 expressions on non-browser environment like Node.js. Mathjax converts LiteDOM tree into HTML string. This package converts
 it into React element tree instead.
 
