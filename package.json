@@ -1,6 +1,6 @@
 {
   "name": "react-mathjax-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React component to render math expressions with Mathjax through LiteDOM. Neither dangerouslySetInnerHTML nor real DOM insertion is necessary.",
   "main": "index.js",
   "files": [
@@ -20,7 +20,7 @@
     "bundle": "esbuild demo/index.tsx --bundle --outfile=demo/bundle.js --platform=browser --color=true --minify",
     "lint": "prettier --check '*.ts' '*.tsx' 'demo/*.tsx'",
     "fmt": "prettier --write '*.ts' '*.tsx' 'demo/*.tsx'",
-    "postinstall": "cp node_modules/bulma/css/bulma.min.css ./demo/",
+    "prepare": "cp node_modules/bulma/css/bulma.min.css ./demo/",
     "test": "mocha test.js"
   },
   "repository": {
