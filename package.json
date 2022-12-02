@@ -6,7 +6,7 @@
   "scripts": {
     "start": "concurrently -c auto npm:demo npm:watch:ts npm:watch:bundle",
     "demo": "http-server -p 1234 ./demo",
-    "watch:ts": "tsc -p . --preserveWatchOutput --pretty --watch",
+    "watch:ts": "tsc -p . --watch --preserveWatchOutput --pretty",
     "watch:bundle": "esbuild demo/index.tsx --bundle --outfile=demo/bundle.js --platform=browser --color=true --watch",
     "build": "tsc -p . -d",
     "bundle": "esbuild demo/index.tsx --bundle --outfile=demo/bundle.js --platform=browser --color=true --minify",

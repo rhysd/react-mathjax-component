@@ -29,12 +29,13 @@ function props(elem: LiteElement, key: number | string): LiteProps {
     const props: LiteProps = {key};
     let style = '';
     for (const name of Object.keys(elem.attributes)) {
+        const value = elem.attributes[name];
         if (name.startsWith('data-')) {
-            continue;
+            props[name] = value;
         } else if (name === 'style') {
-            style = elem.attributes[name];
+            style = value;
         } else {
-            props[camelCase(name)] = elem.attributes[name];
+            props[camelCase(name)] = value;
         }
     }
     if (elem.styles !== null) {
