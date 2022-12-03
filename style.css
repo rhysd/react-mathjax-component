@@ -45,6 +45,17 @@ body {
   align-items: center;
 }
 
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+#buttons > * {
+  margin-left: 8px;
+}
+
 @media (max-width: 1200px) {
   #ribbon {
     display: none;
