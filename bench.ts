@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import Benchmark from 'benchmark';
 import { mathjax } from 'mathjax-full/js/mathjax';
 import { TeX } from 'mathjax-full/js/input/tex';
@@ -31,7 +32,7 @@ new Benchmark.Suite()
         console.log(String(event.target));
     })
     .on('complete', function (this: Benchmark.Suite) {
-        console.log('Fastest is ' + this.filter('fastest').map('name'));
+        console.log(`Fastest is ${this.filter('fastest').map('name')}`);
     })
     // run async
     .run({ async: true });
