@@ -13,6 +13,16 @@ body {
   right: 0;
 }
 
+#title {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+#title > img {
+  margin-right: 0.25em;
+  width: 1em;
+}
+
 #intro {
   margin-bottom: 16px;
 }
@@ -54,6 +64,10 @@ body {
 
 #buttons > * {
   margin-left: 8px;
+}
+
+#dl-button {
+  margin-right: auto;
 }
 
 @media (max-width: 1200px) {
