@@ -21,6 +21,7 @@ files=(
     bundle.js
     style.css
     bulma.min.css
+    logo.svg
 )
 
 mkdir ./.tmp

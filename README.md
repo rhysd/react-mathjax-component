@@ -1,5 +1,5 @@
-React component for Mathjax
-===========================
+<img alt="logo" src="demo/logo.svg" /> React component for Mathjax
+==================================================================
 [![npm][npm-badge]][npm]
 [![CI][ci-badge]][ci]
 
@@ -151,4 +151,4 @@ This package is distributed under [the MIT license](./LICENSE.txt).
 [4]: https://www.npmjs.com/package/@yozora/react-mathjax
 [ci-badge]: https://github.com/rhysd/react-mathjax-component/actions/workflows/ci.yml/badge.svg
 [ci]: https://github.com/rhysd/react-mathjax-component/actions/workflows/ci.yml
-[npm-badge]: https://badge.fury.io/js/react-mathjax-component.svg
+[npm-badge]: https://img.shields.io/npm/v/react-mathjax-component
