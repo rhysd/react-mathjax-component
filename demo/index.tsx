@@ -8,9 +8,19 @@ const DEFAULT_EXPR =
 
 const App: React.FC = () => {
     const [expr, setExpr] = useState(DEFAULT_EXPR);
+    const [[fg, bg], setColor] = useState(['black', '#eee']);
+
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
-        console.log(e.target.value);
         setExpr(e.target.value);
+    };
+    const handleLight = (): void => {
+        setColor(['black', '#eee']);
+    };
+    const handleDark = (): void => {
+        setColor(['white', '#111']);
+    };
+    const handleRed = (): void => {
+        setColor(['red', bg]);
     };
 
     return (
@@ -21,8 +31,19 @@ const App: React.FC = () => {
             </div>
             <div id="expr-output">
                 <label className="label">Rendered</label>
-                <div id="expr" className="box">
+                <div id="expr" className="box" style={{ color: fg, backgroundColor: bg }}>
                     <Mathjax expr={expr} />
+                </div>
+                <div id="buttons">
+                    <button className="button is-small is-light" onClick={handleLight}>
+                        Light
+                    </button>
+                    <button className="button is-small is-dark" onClick={handleDark}>
+                        Dark
+                    </button>
+                    <button className="button is-small is-danger" onClick={handleRed}>
+                        Red
+                    </button>
                 </div>
             </div>
         </>

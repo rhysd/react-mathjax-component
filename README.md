@@ -71,8 +71,8 @@ const SomeComponent: React.FC<{expr: string}> = ({expr}) => (
 
 ### Styling math expression element
 
-React element tree rendered by `<Mathjax/>` component is [a React fragment][react-fragment] which contains the SVG element tree.
-So you can style it as you like by its parent element.
+React element tree returned from `<Mathjax/>` component is [a React fragment][react-fragment] which contains a SVG
+element tree. So you can style it as you like with its parent element.
 
 ```typescript
 const InlineMath: React.FC<{expr: string}> = ({expr}) => (
@@ -81,8 +81,8 @@ const InlineMath: React.FC<{expr: string}> = ({expr}) => (
     </span>
 );
 
-const BlockMath: React.FC<{expr: string}> = ({expr}) => (
-    <div className="math-block">
+const RedMathBlock: React.FC<{expr: string}> = ({expr}) => (
+    <div className="math-block" style={{color: 'red'}}>
         <Mathjax expr={expr} />
     </div>
 );
@@ -90,7 +90,7 @@ const BlockMath: React.FC<{expr: string}> = ({expr}) => (
 
 ## API
 
-This package exports single React component `<Mathjax/>` as a default export.
+See [the demo source](./demo/index.tsx) for the working example.
 
 ### `import Mathjax from 'react-mathjax-component'`
 
