@@ -40,10 +40,12 @@
   },
   "homepage": "https://github.com/rhysd/react-mathjax-component#readme",
   "devDependencies": {
+    "@types/benchmark": "^2.1.2",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.11.10",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
+    "benchmark": "^2.1.4",
     "bulma": "^0.9.4",
     "concurrently": "^7.6.0",
     "esbuild": "^0.15.16",
