@@ -77,13 +77,13 @@ So you can style it as you like by its parent element.
 ```typescript
 const InlineMath: React.FC<{expr: string}> = ({expr}) => (
     <span className="math-inline">
-        <Mathjax expr={expr} document={yourDocument} />
+        <Mathjax expr={expr} />
     </span>
 );
 
 const BlockMath: React.FC<{expr: string}> = ({expr}) => (
     <div className="math-block">
-        <Mathjax expr={expr} document={yourDocument} />
+        <Mathjax expr={expr} />
     </div>
 );
 ```
@@ -127,6 +127,10 @@ type Document = MathDocument<LiteElement, LiteText, LiteDocument>;
 ```
 
 Type for `document` property.
+
+## Bug report or feature request
+
+Please [create a new issue ticket](https://github.com/rhysd/react-mathjax-component/issues/new).
 
 ## License
 
