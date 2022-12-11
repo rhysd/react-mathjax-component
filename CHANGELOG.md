@@ -1,3 +1,11 @@
+<a name="v1.0.3"></a>
+# [v1.0.3](https://github.com/rhysd/react-mathjax-component/releases/tag/v1.0.3) - 11 Dec 2022
+
+- Fix `react` peer dependency from `^16.0.0` to `>=16.0.0`
+
+[Changes][v1.0.3]
+
+
 <a name="v1.0.2"></a>
 # [v1.0.2](https://github.com/rhysd/react-mathjax-component/releases/tag/v1.0.2) - 03 Dec 2022
 
@@ -18,6 +26,7 @@ First release :tada:
 [Changes][v1.0.1]
 
 
+[v1.0.3]: https://github.com/rhysd/react-mathjax-component/compare/v1.0.2...v1.0.3
 [v1.0.2]: https://github.com/rhysd/react-mathjax-component/compare/v1.0.1...v1.0.2
 [v1.0.1]: https://github.com/rhysd/react-mathjax-component/tree/v1.0.1
 
