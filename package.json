@@ -1,6 +1,6 @@
 {
   "name": "react-mathjax-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React component to render math expressions with Mathjax through LiteDOM. Neither dangerouslySetInnerHTML nor real DOM insertion is necessary.",
   "main": "index.js",
   "files": [
