@@ -59,6 +59,7 @@
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-security": "^1.7.1",
     "http-server": "^14.1.1",
     "mocha": "^10.1.0",
     "prettier": "^2.8.0",
